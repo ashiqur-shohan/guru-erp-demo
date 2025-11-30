@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GURU ERP - Enterprise Resource Planning Navigation System"
+    />
+    <title>GURU ERP - Navigation Demo</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/navigation.css" />
+  </head>
+  <body>
+    <!-- App Switcher (Top Bar) -->
+    <header class="app-switcher" id="appSwitcher">
+      <div class="app-switcher-container">
+        <!-- Logo -->
+        <div class="logo">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="32" height="32" rx="8" fill="url(#gradient)" />
+            <path
+              d="M16 8L22 12V20L16 24L10 20V12L16 8Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+            <defs>
+              <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                <stop offset="0%" style="stop-color: #6366f1" />
+                <stop offset="100%" style="stop-color: #8b5cf6" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="logo-text">GURU ERP</span>
+        </div>
+
+        <!-- Module Selector -->
+        <nav class="module-nav" id="moduleNav">
+          <button
+            class="module-button active"
+            data-module="finance"
+            id="moduleFinance"
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M10 2L2 7V13L10 18L18 13V7L10 2Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10 11C11.1046 11 12 10.1046 12 9C12 7.89543 11.1046 7 10 7C8.89543 7 8 7.89543 8 9C8 10.1046 8.89543 11 10 11Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+            <span>Finance</span>
+          </button>
+
+          <button
+            class="module-button"
+            data-module="procurement"
+            id="moduleProcurement"
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M3 3H5L7 13H17L19 5H7"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="8" cy="16" r="1" fill="currentColor" />
+              <circle cx="16" cy="16" r="1" fill="currentColor" />
+            </svg>
+            <span>Procurement</span>
+          </button>
+
+          <button class="module-button" data-module="sales" id="moduleSales">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M3 10L5 12L9 8L15 14L17 12"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13 12H17V16"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Sales & CRM</span>
+          </button>
+
+          <button
+            class="module-button"
+            data-module="inventory"
+            id="moduleInventory"
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <rect
+                x="3"
+                y="3"
+                width="6"
+                height="6"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <rect
+                x="11"
+                y="3"
+                width="6"
+                height="6"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <rect
+                x="3"
+                y="11"
+                width="6"
+                height="6"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <rect
+                x="11"
+                y="11"
+                width="6"
+                height="6"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+            <span>Inventory</span>
+          </button>
+
+          <button class="module-button" data-module="hrm" id="moduleHRM">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle
+                cx="10"
+                cy="6"
+                r="3"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M4 16C4 13.2386 6.23858 11 9 11H11C13.7614 11 16 13.2386 16 16"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span>HRM</span>
+          </button>
+
+          <button class="module-button" data-module="admin" id="moduleAdmin">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle
+                cx="10"
+                cy="10"
+                r="7"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M10 6V10L13 12"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span>Admin</span>
+          </button>
+        </nav>
+
+        <!-- User Menu -->
+        <div class="user-menu">
+          <button
+            class="sidebar-toggle"
+            id="sidebarToggle"
+            aria-label="Toggle sidebar"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 12H21M3 6H21M3 18H21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+          <div class="user-avatar">
+            <span>AS</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+      <!-- Context Sidebar -->
+      <aside class="context-sidebar" id="contextSidebar">
+        <div class="sidebar-header">
+          <h2 id="sidebarTitle">Finance & Accounting</h2>
+          <div class="search-box">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <circle
+                cx="8"
+                cy="8"
+                r="5.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M12 12L16 16"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search menu..."
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" id="sidebarNav">
+          <!-- Navigation items will be dynamically inserted here -->
+        </nav>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content" id="mainContent">
+        <div class="welcome-screen">
+          <div class="welcome-icon">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+              <circle
+                cx="40"
+                cy="40"
+                r="38"
+                stroke="url(#welcomeGradient)"
+                stroke-width="4"
+              />
+              <path
+                d="M40 20L52 28V52L40 60L28 52V28L40 20Z"
+                stroke="url(#welcomeGradient)"
+                stroke-width="3"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <linearGradient
+                  id="welcomeGradient"
+                  x1="0"
+                  y1="0"
+                  x2="80"
+                  y2="80"
+                >
+                  <stop offset="0%" style="stop-color: #6366f1" />
+                  <stop offset="100%" style="stop-color: #8b5cf6" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h1>Welcome to GURU ERP</h1>
+          <p>Select a module from the top bar to view available options</p>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-value">6</div>
+              <div class="stat-label">Modules</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">211</div>
+              <div class="stat-label">Features</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">100%</div>
+              <div class="stat-label">Coverage</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/navigation.js"></script>
+  </body>
+</html>
